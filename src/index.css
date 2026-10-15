@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --theme-primary: #800020;
+    --theme-accent: #BE5103;
+    --theme-highlight: #FFCE1B;
+    --theme-secondary: #A52A2A;
+    --theme-canvas: #FFFDF9;
+    --theme-surface: #FAF4EC;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  [data-theme="harvest"] {
+    --theme-primary: #800020;
+    --theme-accent: #BE5103;
+    --theme-highlight: #FFCE1B;
+    --theme-secondary: #A52A2A;
+    --theme-canvas: #FFFDF9;
+    --theme-surface: #FAF4EC;
+    background-color: #FFFDF9;
+    color: #4A0E17;
+  }
+
+  [data-theme="winter"] {
+    --theme-primary: #0B2E33;
+    --theme-accent: #4F7C82;
+    --theme-highlight: #B8E3E9;
+    --theme-secondary: #93B1B5;
+    --theme-canvas: #FFFFFF;
+    --theme-surface: #F4F9FA;
+    background-color: #FFFFFF;
+    color: #0B2E33;
+  }
+
+  body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+/* Futuristic Ambient Grid */
+.bg-future-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+}
+
+[data-theme="harvest"] .bg-future-grid {
+  background-image: 
+    linear-gradient(to right, rgba(128, 0, 32, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(128, 0, 32, 0.05) 1px, transparent 1px);
+}
+
+[data-theme="winter"] .bg-future-grid {
+  background-image: 
+    linear-gradient(to right, rgba(11, 46, 51, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(11, 46, 51, 0.04) 1px, transparent 1px);
+}
+
+/* Laser Scanner Animation */
+@keyframes laser-sweep {
+  0% {
+    top: 0%;
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0.3;
+  }
+}
+
+.animate-laser {
+  animation: laser-sweep 2.8s cubic-bezier(0.4, 0, 0.6, 1) infinite alternate;
+}
+
+/* Pulse radar ring */
+@keyframes radar-ping {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+}
+
+.animate-radar {
+  animation: radar-ping 3s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+/* Subtle glowing shimmer */
+@keyframes glow-shimmer {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+.animate-glow-slow {
+  animation: glow-shimmer 4s ease-in-out infinite;
+}

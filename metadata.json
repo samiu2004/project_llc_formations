@@ -1,0 +1,6 @@
+{
+  "name": "UD LLC Formations",
+  "description": "Permanent US LLC Formation Agency for non-resident and domestic founders across USA, UAE, Australia, and Pakistan by United Discount Marketing LLC.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
